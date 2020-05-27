@@ -43,7 +43,7 @@ public class ATM {
         System.out.println("Your balance is: " + balance);
     }
     public void endProgram(){
-        System.out.println("Thank you for using BOI!");
+        System.out.println("Thank you for using BOI ATM!");
         System.exit(0);
     }
 }

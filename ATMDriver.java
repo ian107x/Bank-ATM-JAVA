@@ -14,11 +14,11 @@ public class ATMDriver {
             usingATM = true;
         }
         while(usingATM == true){
-            System.out.println("What will you do?\n" + "1.set new pin?\n" + "2.withdraw money?\n" + "3.deposit money?\n" + "4.check balance?\n" + "Cancel?"); 
+            System.out.println("What will you do?\n Press the appropriate number.\n" + "1.set new pin?\n" + "2.withdraw money?\n" + "3.deposit money?\n" + "4.check balance?\n" + "5.Cancel?"); 
             int action = scan.nextInt();
             if (action == 1){
                 BOI.setPin();
-                usingATM = false;
+                //usingATM = false;
             }
             else if (action == 2){
                 BOI.withDraw(20);
@@ -36,8 +36,9 @@ public class ATMDriver {
                 usingATM = false;
             }
         }
-        System.out.println("Thank you for using BOI ATM");
         scan.close();
+        BOI.endProgram();
+        
     }
 
 }
