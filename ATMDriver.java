@@ -21,11 +21,15 @@ public class ATMDriver {
                 //usingATM = false;
             }
             else if (action == 2){
-                BOI.withDraw(20);
+                System.out.println("How much do you want to withdraw?");
+                int withDrawAmount = scan.nextInt();
+                BOI.withDraw(withDrawAmount);
                 usingATM = false;
             }
             else if (action == 3){
-                BOI.deposit(20);
+                System.out.println("How much money do you want to deposit?");
+                int depositAmount = scan.nextInt();
+                BOI.deposit(depositAmount);
                 usingATM = false;
             }
             else if (action == 4){
@@ -34,6 +38,9 @@ public class ATMDriver {
             else if (action == 5){
                 System.out.println("You choose to do nothing.");
                 usingATM = false;
+            }
+            else{
+                System.out.println("ERROR! INVALID INPUT!");
             }
         }
         scan.close();
